@@ -28,6 +28,9 @@ int speedMultiplier = 3;
 
 boolean bRunning = false;
 
+// Decides if we want to start over when done, might be useful for someone eles' project
+boolean bLoop = false;
+
 #define numCycles 10
 Cycle *cycles[numCycles];
 int currentCycle = 0;
@@ -156,7 +159,13 @@ void loop() {
 
 	// Here's where we detect if we've finished...
 	if (currentCycle >= numCycles) {
-		currentCycle = 0;
+		if (bLoop)
+			// Restart
+			currentCycle = 0;
+		else
+			// Otherwise stay in our current cycle so nothing changes, we'll wait for the kill signal
+			currentCycle = numCycles - 1;
+
 	}
 	Serial.println("Starting cycle " + String(currentCycle));
   }
