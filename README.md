@@ -4,7 +4,7 @@ After reading about ambient light alarm clocks, I thought I'd take a stab at mak
 Here's the Arduino sketch I wrote that functions as an alarm clock. 
 
 # TODO:
-Remove looping
+~~Remove looping~~
 
 Add python code for starting and stopping 
 
