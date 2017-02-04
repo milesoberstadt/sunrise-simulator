@@ -3,12 +3,15 @@ After reading about ambient light alarm clocks, I thought I'd take a stab at mak
 
 Here's the Arduino sketch I wrote that functions as an alarm clock. 
 
-# TODO:
-~~Remove looping~~
-
-Add python code for starting and stopping 
 
 # Configuration
 This sketch assumes you have an RGB (non-addressable) strip hooked up to pins 9 (red), 10 (green), and 11 (blue).
 
-It also requires you to connect via serial to send the commands "on" or "off" to control the sunrise. Since the Arduino has no real time clock, I'm employing the help of my Raspberry Pi and a cron job.
+I have now moved to a dumber Arduino setup which only reads serial, converts the sent value, and displays. 
+This allows for a more flexible python client to control the lights and possibly integrate with other stuff. 
+
+# Compiling
+If you're using Linux, you can run the compile script inside the sketch folder to upload the sketch to your Arduino.
+
+# Running the client
+This project uses python2.7, but you should be able to use other versions. `./startSun.sh` will run the sunrise, `./stopSun.sh` will set the Arduino's color to "000000".
