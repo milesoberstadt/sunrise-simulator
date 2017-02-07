@@ -11,6 +11,7 @@ I have now moved to a dumber Arduino setup which only reads serial, converts the
 This allows for a more flexible python client to control the lights and possibly integrate with other stuff. 
 
 # Compiling
+Make sure you have the [Arduino IDE](https://www.arduino.cc/en/Main/Software) installed! 
 If you're using Linux, you can run the compile script inside the sketch folder to upload the sketch to your Arduino.
 
 # Running the client
